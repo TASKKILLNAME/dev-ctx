@@ -1,0 +1,57 @@
+{
+  "name": "@npm_lee/dev-ctx",
+  "version": "0.2.0",
+  "description": "Save and restore development context across Claude Code sessions",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "dev-ctx": "bin/dev-ctx.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build && npm run typecheck && npm test"
+  },
+  "author": "dongj",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongj/dev-ctx"
+  },
+  "homepage": "https://github.com/dongj/dev-ctx#readme",
+  "keywords": [
+    "claude",
+    "context",
+    "developer-tools",
+    "cli",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.0",
+    "chalk": "^5.3.0",
+    "clipboardy": "^4.0.0",
+    "commander": "^12.1.0",
+    "conf": "^13.0.1",
+    "handlebars": "^4.7.8",
+    "nanoid": "^5.0.9",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

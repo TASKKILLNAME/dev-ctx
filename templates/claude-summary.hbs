@@ -1,0 +1,15 @@
+# Quick Context
+
+**{{label}}** | {{createdAt}} | `{{workingDirectory}}`
+{{#ifPresent git}}
+Branch: `{{git.branch}}` ({{git.status}})
+{{/ifPresent}}
+{{#ifPresent project}}
+Project: {{project.name}}@{{project.version}}
+{{/ifPresent}}
+{{#if memos.length}}
+Notes:
+{{#each memos}}
+- {{this.content}}
+{{/each}}
+{{/if}}

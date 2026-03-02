@@ -1,0 +1,11 @@
+name = "dev-ctx-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-05"
+
+[[kv_namespaces]]
+binding = "DEV_CTX_STORE"
+id = "acb1330582104f0390abd354005b45a7"
+
+# [vars]
+# API_KEY = "your-api-key-here"
+# 실제로는 wrangler secret put API_KEY 로 설정

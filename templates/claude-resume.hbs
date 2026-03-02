@@ -1,0 +1,54 @@
+# Development Context Resume
+
+I'm resuming work on a previous development session. Here's the context:
+
+## Session Info
+- **Label:** {{label}}
+- **Saved at:** {{createdAt}}
+- **Working Directory:** {{workingDirectory}}
+
+{{#ifPresent git}}
+## Git Status
+- **Branch:** {{git.branch}}
+- **Status:** {{git.status}}
+{{#if git.changedFiles.length}}
+
+### Changed Files
+{{#each git.changedFiles}}
+- `{{this}}`
+{{/each}}
+{{/if}}
+{{#if git.recentCommits.length}}
+
+### Recent Commits
+{{#each git.recentCommits}}
+- {{this}}
+{{/each}}
+{{/if}}
+{{#if git.diff}}
+
+### Diff Summary
+```
+{{git.diff}}
+```
+{{/if}}
+{{/ifPresent}}
+
+{{#ifPresent project}}
+## Project Info
+- **Name:** {{project.name}}
+- **Version:** {{project.version}}
+{{#if project.description}}
+- **Description:** {{project.description}}
+{{/if}}
+{{/ifPresent}}
+
+{{#if memos.length}}
+## Developer Notes
+{{#each memos}}
+- {{this.content}}{{#if this.tags.length}} (tags: {{join this.tags ", "}}){{/if}}
+{{/each}}
+{{/if}}
+
+---
+Please continue from where I left off, keeping this context in mind.
