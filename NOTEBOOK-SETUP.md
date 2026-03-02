@@ -1,5 +1,8 @@
 # dev-ctx 노트북 설정 가이드
 
+- GitHub: https://github.com/TASKKILLNAME/dev-ctx
+- npm: https://www.npmjs.com/package/@npm_lee/dev-ctx
+
 데스크탑과 컨텍스트를 공유하기 위한 노트북 설정 절차.
 
 ## 1. dev-ctx 설치
